@@ -4,167 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inspire Sport Academy</title>
+
+  <!-- Font Awesome (Free) via CDN — use this so icons reliably load -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pbVd6kXg8VbJ0Y1qkqv3Zz6c0G3m3h+q/5k9qZ6x1jOqG6G5k5K6b6X6b6K6b6X" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 80px;
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #e63946;
-      text-transform: uppercase;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #e63946;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px;
-      flex-wrap: wrap;
-    }
-
-    .hero-text {
-      max-width: 500px;
-    }
-
-    .hero-text h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .hero-text p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-      color: #555;
-    }
-
-    .btn {
-      background: #e63946;
-      color: #fff;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background: #d62828;
-    }
-
-    .hero img {
-      width: 420px;
-      max-width: 100%;
-      border-radius: 20px;
-    }
-
-    section {
-      padding: 80px;
-      text-align: center;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #111;
-    }
-
-    .about p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #555;
-      font-size: 1.05rem;
-    }
-
-    .programs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .program {
-      border: 1px solid #eee;
-      padding: 40px 20px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .program:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
-
-    .program i {
-      font-size: 2.5rem;
-      color: #e63946;
-      margin-bottom: 15px;
-    }
-
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 40px;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #fff; color: #222; line-height: 1.6; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 80px; background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .logo { font-size: 1.5rem; font-weight: 700; color: #e63946; text-transform: uppercase; }
+    nav ul { display: flex; gap: 30px; list-style: none; }
+    nav a { text-decoration: none; color: #222; font-weight: 500; transition: color 0.3s ease; }
+    nav a:hover { color: #e63946; }
+    .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px; flex-wrap: wrap; }
+    .hero-text { max-width: 500px; }
+    .hero-text h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; }
+    .hero-text p { font-size: 1.1rem; margin-bottom: 30px; color: #555; }
+    .btn { background: #e63946; color: #fff; padding: 14px 28px; border: none; border-radius: 30px; font-size: 1rem; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; }
+    .btn:hover { background: #d62828; }
+    .hero img { width: 420px; max-width: 100%; border-radius: 20px; }
+    section { padding: 80px; text-align: center; }
+    section h2 { font-size: 2rem; margin-bottom: 30px; color: #111; }
+    .about p { max-width: 700px; margin: 0 auto; color: #555; font-size: 1.05rem; }
+    .programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+    .program { border: 1px solid #eee; padding: 40px 20px; border-radius: 20px; transition: all 0.3s ease; }
+    .program:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+    .program i { font-size: 2.5rem; color: #e63946; margin-bottom: 15px; }
+    footer { background: #111; color: #fff; text-align: center; padding: 40px; }
+    footer p { margin: 10px 0; }
+    .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
+    .social-links a { color: #fff; font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none; }
+    .social-links a:hover { color: #e63946; }
     @media (max-width: 768px) {
-      header {
-        padding: 20px 40px;
-      }
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px;
-      }
-      .hero img {
-        margin-top: 40px;
-      }
+      header { padding: 20px 40px; }
+      .hero { flex-direction: column; text-align: center; padding: 40px; }
+      .hero img { margin-top: 40px; }
     }
   </style>
-  <script src="https://kit.fontawesome.com/a2e0cfae33.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -180,7 +56,7 @@
 
   <section class="hero" id="home">
     <div class="hero-text">
-      <h1>Inspire Sports Academy</h1>
+      <h1>Inspire Sport Academy</h1>
       <p>We help players become the best version of themselves through dedication, teamwork, and world-class training.</p>
       <a href="#contact" class="btn">Enroll Now</a>
     </div>
@@ -189,7 +65,7 @@
 
   <section class="about" id="about">
     <h2>About</h2>
-    <p>At Inspire Sports Academy, we focus on building not just skills but strong character, discipline, and passion for football. Our expert coaches guide players through structured programs that inspire excellence both on and off the field.</p>
+    <p>At Inspire Sport Academy, we focus on building not just skills but strong character, discipline, and passion for football. Our expert coaches guide players through structured programs that inspire excellence both on and off the field.</p>
   </section>
 
   <section class="programs">
@@ -214,6 +90,22 @@
   <footer id="contact">
     <p>Contact us: info@inspiresportacademy.com</p>
     <p>© 2025 Inspire Sport Academy. All rights reserved.</p>
+
+    <div class="social-links">
+      <!-- Replace these URLs with your real handles -->
+      <a href="https://facebook.com/inspiresportacademy" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://instagram.com/inspiresportacademy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://twitter.com/inspiresport_ac" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+      </a>
+      <a href="https://youtube.com/channel/INSPIRE" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <i class="fab fa-youtube" aria-hidden="true"></i>
+      </a>
+    </div>
   </footer>
 </body>
 </html>
